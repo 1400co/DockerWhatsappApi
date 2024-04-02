@@ -42,3 +42,8 @@ If you want to discover all the functions and features offered by the library yo
 ## Contact Us
 - [💻 Discord](https://link.codigoencasa.com/DISCORD)
 - [👌 𝕏 (Twitter)](https://twitter.com/leifermendez)
+
+## Docker
+docer build --build-arg PORT=3008 -t whatsapp-api:wp-api .
+docker run -d -p 3008:3008 whatsapp-api:wp-api
+
