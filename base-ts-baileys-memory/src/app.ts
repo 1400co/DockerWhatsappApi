@@ -21,11 +21,11 @@ const main = async () => {
     adapterProvider.server.post(
         '/v1/messages',
         handleCtx(async (bot, req, res) => {
-            const { number, message, urlMedia } = req.body
-            await bot.sendMessage(number, message, { media: urlMedia ?? null })
-            return res.end('sended')
+            const { number, message, urlMedia } = req.body;
+            await bot.sendMessage(number, message, { media: urlMedia ?? null });
+            res.status(200).json({ message: 'Message sent successfully' });
         })
-    )
+    );
 
     adapterProvider.server.post(
         '/v1/register',
